@@ -26,7 +26,7 @@ import androidx.compose.ui.window.Dialog
 fun SearchDialog(
     modifier: Modifier = Modifier,
     shownItems: List<String> = emptyList(),
-    noItemFoundText: String = "No item to be found",
+    noItemFoundText: String = "No item found",
     onSearchValueChange: (String) -> Unit,
     onItemSelected: (String) -> Unit,
     onDismiss: () -> Unit,
