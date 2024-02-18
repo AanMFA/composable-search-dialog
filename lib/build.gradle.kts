@@ -1,6 +1,9 @@
+import java.net.URI
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
@@ -47,4 +50,17 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
 
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+}
+
+configure<PublishingExtension> {
+    repositories {
+        maven {
+            name = "ComposableSearchDialog"
+            url = URI("https://maven.pkg.github.com/AanMFA/composable-search-dialog")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
 }
