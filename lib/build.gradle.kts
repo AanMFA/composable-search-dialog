@@ -55,7 +55,7 @@ dependencies {
 configure<PublishingExtension> {
     repositories {
         maven {
-            name = "ComposableSearchDialog"
+            name = "GitHubPackages"
             url = URI("https://maven.pkg.github.com/AanMFA/composable-search-dialog")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
